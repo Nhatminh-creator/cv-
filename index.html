@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PHAM NHAT MINH — Portfolio</title>
 
-<!-- Inter + Be Vietnam Pro: both have complete Vietnamese Unicode coverage -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -37,7 +36,6 @@
 html { scroll-behavior: smooth; }
 
 body {
-  /* Inter + Be Vietnam Pro: full Vietnamese tonal mark coverage (ườ, ữ, ắ, ẹ etc.) */
   font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
   background: var(--navy);
   color: var(--white);
@@ -116,6 +114,8 @@ main, nav, footer, section { position: relative; z-index: 1; }
   color: var(--teal); font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s;
   font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
+} /* ← FIX: closing brace was missing here */
+.lang-btn:hover { background: rgba(0,212,200,0.15); border-color: rgba(0,212,200,0.45); }
 .lang-dropdown {
   position: absolute; top: calc(100% + 8px); right: 0;
   background: var(--navy-mid); border: 1px solid rgba(0,212,200,0.2);
@@ -289,7 +289,6 @@ main, nav, footer, section { position: relative; z-index: 1; }
   font-style: italic;
 }
 
-/* Info cards — now only 2 (Major + Languages) */
 .about-sidebar { display: flex; flex-direction: column; gap: 0.9rem; }
 .info-card {
   background: var(--navy-card); border: 1px solid var(--border-soft);
@@ -352,7 +351,6 @@ main, nav, footer, section { position: relative; z-index: 1; }
 
 /* ════════════════════════════
    §4  SKILLS
-   4 groups: Specialized | Tech & AI | Soft Skills | Languages
 ════════════════════════════ */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.35rem; }
 .skill-group {
@@ -380,7 +378,6 @@ main, nav, footer, section { position: relative; z-index: 1; }
 
 /* ════════════════════════════
    §5  EDUCATION & ACHIEVEMENTS
-   Combined section: 2-column layout
 ════════════════════════════ */
 .edu-ach-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start;
@@ -569,7 +566,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 
   main { padding-top: 0 !important; }
 
-  /* Hero */
   #hero {
     min-height: auto !important; padding: 0 0 1cm !important;
     border-bottom: 2pt solid #111 !important; margin-bottom: 0.6cm !important;
@@ -591,29 +587,24 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   }
   .hero-slogan small { display: none !important; }
 
-  /* Sections */
   .section { padding: 0.5cm 0 !important; page-break-inside: avoid; }
   .section-title { font-size: 13pt !important; margin-bottom: 0.45cm !important; }
   .alt-bg { background: #fff !important; }
   .section-eyebrow { color: #555 !important; }
 
-  /* About */
   .about-layout { grid-template-columns: 1fr !important; gap: 0.35cm !important; }
   .about-sidebar { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0.3cm !important; }
   .info-card, .about-hook { border: 1pt solid #ccc !important; padding: 0.3cm !important; border-radius: 3pt !important; }
 
-  /* Projects */
   .projects-grid { grid-template-columns: 1fr 1fr !important; gap: 0.4cm !important; }
   .project-card { border: 1pt solid #ccc !important; border-radius: 5pt !important; page-break-inside: avoid !important; }
   .project-banner { height: 0 !important; overflow: hidden !important; }
   .project-body { padding: 0.4cm !important; }
 
-  /* Skills */
   .skills-grid { grid-template-columns: repeat(2,1fr) !important; gap: 0.35cm !important; }
   .skill-group { border: 1pt solid #ccc !important; padding: 0.35cm !important; border-radius: 3pt !important; }
   .skill-tag { border: 1pt solid #bbb !important; font-size: 7pt !important; }
 
-  /* Education & Achievements */
   .edu-ach-grid { grid-template-columns: 1fr 1fr !important; gap: 0.8cm !important; }
   .timeline::before { background: #888 !important; }
   .tl-dot, .tl-dot.active { border: 2pt solid #333 !important; background: #fff !important; box-shadow: none !important; }
@@ -621,7 +612,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   .ach-badge { border: 1pt solid #888 !important; }
   .ach-card.placeholder { display: none !important; }
 
-  /* Contact */
   .contact-layout { grid-template-columns: 1fr !important; gap: 0.3cm !important; }
   .cta-box { border: 1pt solid #ccc !important; padding: 0.5cm !important; }
   .contact-item { border: 1pt solid #ddd !important; padding: 0.3cm !important; }
@@ -729,7 +719,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         <div class="about-hook" data-i18n="about_hook">✦ Hành trình của tôi là kết nối công trình và câu chuyện. Còn nhiều điều chưa kể — hãy tiếp tục khám phá.</div>
       </div>
 
-      <!-- Only 2 info cards: Major + Languages (no address/hometown) -->
       <div class="about-sidebar" data-aos="fade-left" data-aos-delay="150">
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_major_lbl">Chuyên ngành</div>
@@ -745,7 +734,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_email_lbl">Email</div>
-          <div class="info-card-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="107e7d797e6078717d21232150777d71797c3e737f7d">[email&#160;protected]</a></div>
+          <div class="info-card-value">pnminh.work@gmail.com</div>
         </div>
       </div>
     </div>
@@ -798,7 +787,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 
 <!-- ══════════════════════════════
      §4  SKILLS
-     4 groups in 2×2 grid
 ═════════════════════════════════ -->
 <section id="skills" class="section alt-bg">
   <div class="container">
@@ -808,7 +796,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
     </div>
     <div class="skills-grid">
 
-      <!-- Specialized -->
       <div class="skill-group" data-aos="fade-up" data-aos-delay="50">
         <div class="skill-group-title" data-i18n="sk_g1">Kỹ năng Chuyên môn</div>
         <div class="skill-tags">
@@ -818,7 +805,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
       </div>
 
-      <!-- Tech & AI -->
       <div class="skill-group" data-aos="fade-up" data-aos-delay="110">
         <div class="skill-group-title" data-i18n="sk_g2">Công nghệ &amp; AI</div>
         <div class="skill-tags">
@@ -828,7 +814,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
       </div>
 
-      <!-- Soft Skills & Interests -->
       <div class="skill-group" data-aos="fade-up" data-aos-delay="170">
         <div class="skill-group-title" data-i18n="sk_g3">Kỹ năng Mềm &amp; Sở thích</div>
         <div class="skill-tags">
@@ -837,7 +822,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
       </div>
 
-      <!-- Languages -->
       <div class="skill-group" data-aos="fade-up" data-aos-delay="230">
         <div class="skill-group-title" data-i18n="sk_g4">Ngôn ngữ</div>
         <div class="skill-tags">
@@ -852,7 +836,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 
 <!-- ══════════════════════════════
      §5  EDUCATION & ACHIEVEMENTS
-     Side-by-side layout
 ═════════════════════════════════ -->
 <section id="education" class="section">
   <div class="container">
@@ -862,7 +845,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
     </div>
     <div class="edu-ach-grid">
 
-      <!-- LEFT: Timeline (2 entries only) -->
       <div data-aos="fade-right" data-aos-delay="60">
         <div class="subsection-label" data-i18n="edu_sub">Lộ trình học tập</div>
         <div class="timeline">
@@ -884,7 +866,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
       </div>
 
-      <!-- RIGHT: Achievement cards -->
       <div data-aos="fade-left" data-aos-delay="100">
         <div class="subsection-label" data-i18n="ach_sub">Giải thưởng &amp; Thành tựu</div>
         <div class="ach-cards">
@@ -929,11 +910,11 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
               <div class="contact-val">0328 664 734</div>
             </div>
           </a>
-          <a href="/cdn-cgi/l/email-protection#b5dbd8dcdbc5ddd4d8848684f5d2d8d4dcd99bd6dad8" class="contact-item">
+          <a href="mailto:pnminh.work@gmail.com" class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-lbl" data-i18n="ct_email_lbl">Email</div>
-              <div class="contact-val"><span class="__cf_email__" data-cfemail="701e1d191e0018111d41434130171d11191c5e131f1d">[email&#160;protected]</span></div>
+              <div class="contact-val">pnminh.work@gmail.com</div>
             </div>
           </a>
           <a href="https://www.facebook.com/sic.kd.52" target="_blank" rel="noopener" class="contact-item" id="contact-fb">
@@ -971,31 +952,27 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 </footer>
 
 <!-- ══════════ SCRIPTS ══════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({ once: true, offset: 55, easing: 'ease-out-cubic', duration: 740 });
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* ════════════════════════════════════════════════════
    CENTRALIZED TRANSLATIONS — 4 LANGUAGES
-   All keys aligned: no missing keys across any locale
 ════════════════════════════════════════════════════ */
 const T = {
 
   /* ─────────────── TIẾNG VIỆT ─────────────── */
   vi: {
     flag:'🇻🇳', code:'VI',
-    // Nav
     nav_about:'Giới thiệu', nav_projects:'Dự án', nav_skills:'Kỹ năng',
     nav_edu:'Học vấn', nav_contact:'Liên hệ',
-    // Hero
     hero_badge:'Hồ sơ cá nhân',
     headline_1:'Kỹ sư Đường sắt Tốc độ cao Tương lai',
     headline_2:'Nhiệt huyết với AI',
     slogan_main:'Dũng cảm tiếp bước, kết nối tương lai.',
     slogan_sub:'"Bravely step forward, connect the future."',
     cta_proj:'Xem dự án', cta_contact:'Liên hệ tôi',
-    // About
     about_title:'Tôi là ai?',
     about_p1:'Tôi là người <strong>kiên nhẫn, tỉ mỉ</strong> và luôn đam mê khám phá những điều mới mẻ. Không phải kiểu người vội vàng kết luận — tôi thích quan sát, phân tích và hiểu tường tận trước khi hành động.',
     about_p2:'Điều thú vị ở tôi là sự kết hợp không tưởng: một <strong>nền tảng Vật lý chuyên sâu</strong> cùng với <strong>Giải Nhì Văn học cấp Thành phố</strong>. Logic và cảm xúc — tôi không chọn một bên.',
@@ -1004,41 +981,30 @@ const T = {
     ic_uni_lbl:'Trường đại học',  ic_uni_val:'Đại học Bách Khoa - Đại học Đà Nẵng',
     ic_lang_lbl:'Ngôn ngữ',       ic_lang_val:'Tiếng Việt · Tiếng Anh',
     ic_email_lbl:'Email',
-    // Projects
     proj_title:'Công việc & Dự án',
     p1_tag:'Mạng xã hội', p1_name:'Trang Facebook Kiến thức Đường sắt',
     p1_desc:'Admin của trang chia sẻ kiến thức về đường sắt tốc độ cao và đường sắt đô thị tại Việt Nam. Cập nhật thông tin chuyên ngành, phân tích chính sách và xu hướng phát triển hạ tầng giao thông hiện đại.',
     p2_tag:'Nghiên cứu', p2_name:'Nhóm Nghiên cứu Istar — ĐH Bách Khoa Đà Nẵng',
     p2_desc:'Thành viên của nhóm nghiên cứu Istar tại Trường Đại học Bách Khoa Đà Nẵng. Tham gia các hoạt động nghiên cứu khoa học, ứng dụng công nghệ tiên tiến trong lĩnh vực kỹ thuật và xây dựng hạ tầng.',
     p_visit:'Truy cập trang',
-    // Skills
     sk_title:'Kỹ năng & Công cụ',
     sk_g1:'Kỹ năng Chuyên môn', sk_g2:'Công nghệ & AI',
     sk_g3:'Kỹ năng Mềm & Sở thích', sk_g4:'Ngôn ngữ',
-    sk_s1:'AutoCAD',
-    sk_s2:'Phân tích Kết cấu Cơ bản',
-    sk_s3:'Kỹ thuật Đường sắt',
-    sk_t1:'Prompt Engineering',
-    sk_t2:'Ứng dụng LLM trong Nghiên cứu',
-    sk_t3:'Phân tích Dữ liệu',
-    sk_soft1:'Phân tích Tài chính & Giao dịch',
-    sk_soft2:'Sáng tạo Nội dung',
-    sk_l1:'Tiếng Việt (Bản ngữ)',
-    sk_l2:'Tiếng Anh (Trung cấp)',
-    // Education
+    sk_s1:'AutoCAD', sk_s2:'Phân tích Kết cấu Cơ bản', sk_s3:'Kỹ thuật Đường sắt',
+    sk_t1:'Prompt Engineering', sk_t2:'Ứng dụng LLM trong Nghiên cứu', sk_t3:'Phân tích Dữ liệu',
+    sk_soft1:'Phân tích Tài chính & Giao dịch', sk_soft2:'Sáng tạo Nội dung',
+    sk_l1:'Tiếng Việt (Bản ngữ)', sk_l2:'Tiếng Anh (Trung cấp)',
     edu_title:'Học vấn & Thành tích',
     edu_sub:'Lộ trình học tập',
     e1_school:'THPT Chuyên Lê Thánh Tông', e1_detail:'Chuyên Vật lý · Hội An, Đà Nẵng',
     e2_school:'Đại học Bách Khoa - Đại học Đà Nẵng', e2_detail:'Ngành: Xây dựng Đường sắt Tốc độ cao & Đường sắt Đô thị',
     present:'Hiện tại',
-    // Achievements
     ach_sub:'Giải thưởng & Thành tựu',
     ach1_title:'Giải Nhì Văn học - Học văn cấp Thành phố',
     ach1_badge:'Cấp Thành phố',
     ach2_year:'Sắp tới',
     ach2_title:'Giải thưởng Học thuật Đại học (Placeholder)',
     ach2_badge:'Đang cập nhật',
-    // Contact
     ct_title:'Kết nối với tôi',
     ct_intro:'Tôi luôn sẵn sàng lắng nghe và kết nối. Dù là cơ hội hợp tác, trao đổi ý tưởng hay chỉ đơn giản là một cuộc trò chuyện — hãy liên hệ với tôi.',
     ct_phone_lbl:'Điện thoại', ct_email_lbl:'Email',
@@ -1077,16 +1043,10 @@ const T = {
     sk_title:'Skills & Tools',
     sk_g1:'Specialized Skills', sk_g2:'Tech & AI',
     sk_g3:'Soft Skills & Interests', sk_g4:'Languages',
-    sk_s1:'AutoCAD',
-    sk_s2:'Structural Analysis Fundamentals',
-    sk_s3:'Railway Engineering Concepts',
-    sk_t1:'Prompt Engineering',
-    sk_t2:'LLMs Application in Research',
-    sk_t3:'Data Analysis',
-    sk_soft1:'Financial Analysis & Trading',
-    sk_soft2:'Content Creation',
-    sk_l1:'Vietnamese (Native)',
-    sk_l2:'English (Intermediate)',
+    sk_s1:'AutoCAD', sk_s2:'Structural Analysis Fundamentals', sk_s3:'Railway Engineering Concepts',
+    sk_t1:'Prompt Engineering', sk_t2:'LLMs Application in Research', sk_t3:'Data Analysis',
+    sk_soft1:'Financial Analysis & Trading', sk_soft2:'Content Creation',
+    sk_l1:'Vietnamese (Native)', sk_l2:'English (Intermediate)',
     edu_title:'Education & Achievements',
     edu_sub:'Academic Journey',
     e1_school:'Le Thanh Tong High School for the Gifted', e1_detail:'Physics Specialization · Hoi An, Da Nang',
@@ -1136,16 +1096,10 @@ const T = {
     sk_title:'技能与工具',
     sk_g1:'专业技能', sk_g2:'科技与 AI',
     sk_g3:'软技能与兴趣', sk_g4:'语言能力',
-    sk_s1:'AutoCAD',
-    sk_s2:'结构分析基础',
-    sk_s3:'铁路工程概念',
-    sk_t1:'Prompt Engineering',
-    sk_t2:'LLM 在研究中的应用',
-    sk_t3:'数据分析',
-    sk_soft1:'金融分析与交易',
-    sk_soft2:'内容创作',
-    sk_l1:'越南语（母语）',
-    sk_l2:'英语（中级）',
+    sk_s1:'AutoCAD', sk_s2:'结构分析基础', sk_s3:'铁路工程概念',
+    sk_t1:'Prompt Engineering', sk_t2:'LLM 在研究中的应用', sk_t3:'数据分析',
+    sk_soft1:'金融分析与交易', sk_soft2:'内容创作',
+    sk_l1:'越南语（母语）', sk_l2:'英语（中级）',
     edu_title:'教育经历与荣誉',
     edu_sub:'学习历程',
     e1_school:'黎圣宗重点高中', e1_detail:'物理专业班 · 岘港市会安',
@@ -1195,16 +1149,10 @@ const T = {
     sk_title:'기술 및 도구',
     sk_g1:'전문 기술', sk_g2:'기술 및 AI',
     sk_g3:'소프트 스킬 및 관심사', sk_g4:'언어 능력',
-    sk_s1:'AutoCAD',
-    sk_s2:'구조 분석 기초',
-    sk_s3:'철도 공학 개념',
-    sk_t1:'Prompt Engineering',
-    sk_t2:'연구에서의 LLM 활용',
-    sk_t3:'데이터 분석',
-    sk_soft1:'재무 분석 및 트레이딩',
-    sk_soft2:'콘텐츠 창작',
-    sk_l1:'베트남어 (모국어)',
-    sk_l2:'영어 (중급)',
+    sk_s1:'AutoCAD', sk_s2:'구조 분석 기초', sk_s3:'철도 공학 개념',
+    sk_t1:'Prompt Engineering', sk_t2:'연구에서의 LLM 활용', sk_t3:'데이터 분석',
+    sk_soft1:'재무 분석 및 트레이딩', sk_soft2:'콘텐츠 창작',
+    sk_l1:'베트남어 (모국어)', sk_l2:'영어 (중급)',
     edu_title:'학력 및 수상 실적',
     edu_sub:'학력 여정',
     e1_school:'레탄통 영재 고등학교', e1_detail:'물리 전공 · 호이안, 다낭',
@@ -1240,7 +1188,6 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key] === undefined) return;
-    // Allow <strong> for bold inline emphasis only
     if (/<strong>/.test(t[key])) {
       el.innerHTML = t[key];
     } else {
@@ -1260,6 +1207,7 @@ function setLang(lang) {
 function toggleLangDropdown() {
   document.getElementById('langDropdown').classList.toggle('open');
 }
+
 document.addEventListener('click', e => {
   if (!e.target.closest('.lang-switcher'))
     document.getElementById('langDropdown').classList.remove('open');
@@ -1269,4 +1217,22 @@ document.addEventListener('click', e => {
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
 }
-document.querySelectorAl
+
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+/* ═══ NAVBAR SCROLL SHADOW ═══ */
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 20) {
+    navbar.style.boxShadow = '0 4px 24px rgba(0,0,0,0.35)';
+  } else {
+    navbar.style.boxShadow = 'none';
+  }
+});
+</script>
+</body>
+</html>
