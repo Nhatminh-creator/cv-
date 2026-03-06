@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -114,7 +114,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   color: var(--teal); font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s;
   font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
-} /* ← FIX: closing brace was missing here */
+} 
 .lang-btn:hover { background: rgba(0,212,200,0.15); border-color: rgba(0,212,200,0.45); }
 .lang-dropdown {
   position: absolute; top: calc(100% + 8px); right: 0;
@@ -149,7 +149,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 .section { padding: 88px 1.5rem; }
 .container { max-width: 1120px; margin: 0 auto; }
 .section-eyebrow {
-  font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500;
+  font-family: 'Roboto Mono', monospace; font-size: 0.68rem; font-weight: 500;
   color: var(--teal); letter-spacing: 0.22em; text-transform: uppercase;
   margin-bottom: 0.45rem;
   display: flex; align-items: center; gap: 0.75rem;
@@ -298,7 +298,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 .info-card-label {
   font-size: 0.65rem; font-weight: 700; color: var(--teal);
   letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 .info-card-value { font-size: 0.88rem; color: var(--off-white); font-weight: 500; line-height: 1.4; }
 
@@ -359,7 +359,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 }
 .skill-group:hover { border-color: rgba(0,212,200,0.22); }
 .skill-group-title {
-  font-family: 'DM Mono', monospace; font-size: 0.66rem; font-weight: 500;
+  font-family: 'Roboto Mono', monospace; font-size: 0.66rem; font-weight: 500;
   color: var(--teal); letter-spacing: 0.16em; text-transform: uppercase;
   margin-bottom: 1.1rem;
   display: flex; align-items: center; gap: 0.5rem;
@@ -383,7 +383,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start;
 }
 .subsection-label {
-  font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500;
+  font-family: 'Roboto Mono', monospace; font-size: 0.68rem; font-weight: 500;
   color: var(--teal); letter-spacing: 0.18em; text-transform: uppercase;
   margin-bottom: 1.5rem;
   display: flex; align-items: center; gap: 0.6rem;
@@ -413,7 +413,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   box-shadow: 0 0 0 6px rgba(0,212,200,0.15), 0 0 14px rgba(0,212,200,0.45);
 }
 .tl-year {
-  font-family: 'DM Mono', monospace; font-size: 0.68rem;
+  font-family: 'Roboto Mono', monospace; font-size: 0.68rem;
   color: var(--teal); letter-spacing: 0.1em; margin-bottom: 0.3rem;
 }
 .tl-school {
@@ -444,7 +444,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 }
 .ach-card.real:hover::before { opacity: 1; }
 .ach-year {
-  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  font-family: 'Roboto Mono', monospace; font-size: 0.65rem;
   color: var(--teal); letter-spacing: 0.1em; margin-bottom: 0.35rem;
 }
 .ach-title {
@@ -481,7 +481,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 .contact-lbl {
   font-size: 0.65rem; font-weight: 700; color: var(--teal);
   letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.12rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 .contact-val { font-size: 0.88rem; color: var(--off-white); font-weight: 500; }
 .cta-box {
@@ -613,7 +613,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   .ach-card.placeholder { display: none !important; }
 
   .contact-layout { grid-template-columns: 1fr !important; gap: 0.3cm !important; }
-  .cta-box { border: 1pt solid #ccc !important; padding: 0.5cm !important; }
+  .cta-box { display: none !important; }
   .contact-item { border: 1pt solid #ddd !important; padding: 0.3cm !important; }
 
   footer { border-top: 1pt solid #ccc !important; padding: 0.25cm 0 0 !important; }
@@ -622,7 +622,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 </head>
 <body>
 
-<!-- ══════════ NAVBAR ══════════ -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">PNM</a>
@@ -656,9 +655,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 
 <main>
 
-<!-- ══════════════════════════════
-     §1  HERO
-═════════════════════════════════ -->
 <section id="hero">
   <div class="hero-grid">
 
@@ -701,9 +697,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     §2  ABOUT
-═════════════════════════════════ -->
 <section id="about" class="section alt-bg">
   <div class="container">
     <div data-aos="fade-up">
@@ -734,16 +727,13 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_email_lbl">Email</div>
-          <div class="info-card-value">pnminh.work@gmail.com</div>
+          <div class="info-card-value"><a href="mailto:nminpham131@gmail.com">nminpham131@gmail.com</a></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     §3  PROJECTS
-═════════════════════════════════ -->
 <section id="projects" class="section">
   <div class="container">
     <div data-aos="fade-up">
@@ -785,9 +775,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     §4  SKILLS
-═════════════════════════════════ -->
 <section id="skills" class="section alt-bg">
   <div class="container">
     <div data-aos="fade-up">
@@ -834,9 +821,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     §5  EDUCATION & ACHIEVEMENTS
-═════════════════════════════════ -->
 <section id="education" class="section">
   <div class="container">
     <div data-aos="fade-up">
@@ -889,9 +873,6 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     §6  CONTACT
-═════════════════════════════════ -->
 <section id="contact" class="section alt-bg">
   <div class="container">
     <div data-aos="fade-up">
@@ -910,11 +891,11 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
               <div class="contact-val">0328 664 734</div>
             </div>
           </a>
-          <a href="mailto:pnminh.work@gmail.com" class="contact-item">
+          <a href="mailto:nminpham131@gmail.com" class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-lbl" data-i18n="ct_email_lbl">Email</div>
-              <div class="contact-val">pnminh.work@gmail.com</div>
+              <div class="contact-val">nminpham131@gmail.com</div>
             </div>
           </a>
           <a href="https://www.facebook.com/sic.kd.52" target="_blank" rel="noopener" class="contact-item" id="contact-fb">
@@ -951,11 +932,11 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   </p>
 </footer>
 
-<!-- ══════════ SCRIPTS ══════════ -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({ once: true, offset: 55, easing: 'ease-out-cubic', duration: 740 });
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+AOS.init({ once: true, offset: 55, easing: 'ease-out-cubic', duration: 740 });
 
 /* ════════════════════════════════════════════════════
    CENTRALIZED TRANSLATIONS — 4 LANGUAGES
