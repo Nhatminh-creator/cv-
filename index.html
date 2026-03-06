@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PHAM NHAT MINH — Portfolio</title>
 
-<!-- Be Vietnam Pro: full Vietnamese diacritic support -->
+<!-- Inter + Be Vietnam Pro: both have complete Vietnamese Unicode coverage -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -37,8 +37,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  /* Be Vietnam Pro covers all Vietnamese tonal marks perfectly */
-  font-family: 'Be Vietnam Pro', sans-serif;
+  /* Inter + Be Vietnam Pro: full Vietnamese tonal mark coverage (ườ, ữ, ắ, ẹ etc.) */
+  font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
   background: var(--navy);
   color: var(--white);
   overflow-x: hidden;
@@ -115,9 +115,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   border-radius: 6px; padding: 0.3rem 0.72rem;
   color: var(--teal); font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s;
-  font-family: 'Be Vietnam Pro', sans-serif;
-}
-.lang-btn:hover { background: rgba(0,212,200,0.16); border-color: var(--teal); }
+  font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
 .lang-dropdown {
   position: absolute; top: calc(100% + 8px); right: 0;
   background: var(--navy-mid); border: 1px solid rgba(0,212,200,0.2);
@@ -131,7 +129,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   padding: 0.6rem 1rem; font-size: 0.8rem; font-weight: 500;
   color: rgba(255,255,255,0.68); cursor: pointer; transition: all 0.15s;
   border: none; background: none; width: 100%; text-align: left;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
 }
 .lang-option:hover, .lang-option.active { background: var(--teal-dim); color: var(--teal); }
 
@@ -251,7 +249,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
 }
 .hero-slogan small {
   display: block; font-size: 0.73rem; font-style: normal;
-  color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif; margin-top: 0.3rem;
+  color: var(--muted); font-family: 'Inter', 'Be Vietnam Pro', sans-serif; margin-top: 0.3rem;
 }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
@@ -262,7 +260,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em;
   padding: 0.8rem 1.8rem; border-radius: 8px;
   text-decoration: none; border: none; cursor: pointer;
-  transition: all 0.25s; font-family: 'Be Vietnam Pro', sans-serif;
+  transition: all 0.25s; font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
 }
 .btn-primary:hover { background: #00f0e2; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,200,0.35); }
 .btn-outline {
@@ -271,7 +269,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em;
   padding: 0.8rem 1.8rem; border-radius: 8px;
   text-decoration: none; border: 1px solid rgba(0,212,200,0.35); cursor: pointer;
-  transition: all 0.25s; font-family: 'Be Vietnam Pro', sans-serif;
+  transition: all 0.25s; font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
 }
 .btn-outline:hover { background: var(--teal-dim); border-color: var(--teal); transform: translateY(-2px); }
 
@@ -502,7 +500,7 @@ main, nav, footer, section { position: relative; z-index: 1; }
   color: var(--navy); font-weight: 700; font-size: 0.86rem;
   padding: 0.9rem 2rem; border-radius: 10px;
   border: none; cursor: pointer; transition: all 0.25s;
-  font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.04em;
+  font-family: 'Inter', 'Be Vietnam Pro', sans-serif; letter-spacing: 0.04em;
   box-shadow: 0 4px 20px rgba(0,212,200,0.22);
 }
 .btn-cv:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,212,200,0.42); }
@@ -566,6 +564,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
   .orbit-ring, .orbit-ring-2,
   .hero-actions, .btn-cv,
   .project-card::before,
+  #contact-fb,
   .ach-card::before { display: none !important; }
 
   main { padding-top: 0 !important; }
@@ -738,7 +737,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_uni_lbl">Trường</div>
-          <div class="info-card-value" data-i18n="ic_uni_val">Đại học Bách Khoa Đà Nẵng</div>
+          <div class="info-card-value" data-i18n="ic_uni_val">Đại học Bách Khoa - Đại học Đà Nẵng</div>
         </div>
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_lang_lbl">Ngôn ngữ</div>
@@ -746,7 +745,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
         </div>
         <div class="info-card">
           <div class="info-card-label" data-i18n="ic_email_lbl">Email</div>
-          <div class="info-card-value">nminpham131@gmail.com</div>
+          <div class="info-card-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="107e7d797e6078717d21232150777d71797c3e737f7d">[email&#160;protected]</a></div>
         </div>
       </div>
     </div>
@@ -878,7 +877,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
           <div class="tl-item" data-aos="fade-up" data-aos-delay="140">
             <div class="tl-dot active"></div>
             <div class="tl-year">2025 – <span data-i18n="present">Hiện tại</span></div>
-            <div class="tl-school" data-i18n="e2_school">Đại học Bách Khoa Đà Nẵng</div>
+            <div class="tl-school" data-i18n="e2_school">Đại học Bách Khoa - Đại học Đà Nẵng</div>
             <div class="tl-detail" data-i18n="e2_detail">Ngành: Xây dựng Đường sắt Tốc độ cao &amp; Đường sắt Đô thị</div>
           </div>
 
@@ -892,7 +891,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 
           <div class="ach-card real" data-aos="fade-up" data-aos-delay="120">
             <div class="ach-year">2021</div>
-            <div class="ach-title" data-i18n="ach1_title">Giải Nhì Học sinh Giỏi Văn / Ngữ văn cấp Thành phố</div>
+            <div class="ach-title" data-i18n="ach1_title">Giải Nhì Văn học - Học văn cấp Thành phố</div>
             <div class="ach-badge">🥈 <span data-i18n="ach1_badge">Cấp Thành phố</span></div>
           </div>
 
@@ -930,14 +929,14 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
               <div class="contact-val">0328 664 734</div>
             </div>
           </a>
-          <a href="mailto:nminpham131@gmail.com" class="contact-item">
+          <a href="/cdn-cgi/l/email-protection#b5dbd8dcdbc5ddd4d8848684f5d2d8d4dcd99bd6dad8" class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-lbl" data-i18n="ct_email_lbl">Email</div>
-              <div class="contact-val">nminpham131@gmail.com</div>
+              <div class="contact-val"><span class="__cf_email__" data-cfemail="701e1d191e0018111d41434130171d11191c5e131f1d">[email&#160;protected]</span></div>
             </div>
           </a>
-          <a href="https://www.facebook.com/sic.kd.52" target="_blank" rel="noopener" class="contact-item">
+          <a href="https://www.facebook.com/sic.kd.52" target="_blank" rel="noopener" class="contact-item" id="contact-fb">
             <div class="contact-icon">💬</div>
             <div>
               <div class="contact-lbl" data-i18n="ct_fb_lbl">Facebook</div>
@@ -972,7 +971,7 @@ footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.7rem 1.5rem; t
 </footer>
 
 <!-- ══════════ SCRIPTS ══════════ -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({ once: true, offset: 55, easing: 'ease-out-cubic', duration: 740 });
 document.getElementById('yr').textContent = new Date().getFullYear();
@@ -1002,7 +1001,7 @@ const T = {
     about_p2:'Điều thú vị ở tôi là sự kết hợp không tưởng: một <strong>nền tảng Vật lý chuyên sâu</strong> cùng với <strong>Giải Nhì Văn học cấp Thành phố</strong>. Logic và cảm xúc — tôi không chọn một bên.',
     about_hook:'✦ Hành trình của tôi là kết nối công trình và câu chuyện. Còn nhiều điều chưa kể — hãy tiếp tục khám phá.',
     ic_major_lbl:'Chuyên ngành', ic_major_val:'Xây dựng Đường sắt Tốc độ cao & Đường sắt Đô thị',
-    ic_uni_lbl:'Trường đại học',  ic_uni_val:'Đại học Bách Khoa Đà Nẵng',
+    ic_uni_lbl:'Trường đại học',  ic_uni_val:'Đại học Bách Khoa - Đại học Đà Nẵng',
     ic_lang_lbl:'Ngôn ngữ',       ic_lang_val:'Tiếng Việt · Tiếng Anh',
     ic_email_lbl:'Email',
     // Projects
@@ -1030,11 +1029,11 @@ const T = {
     edu_title:'Học vấn & Thành tích',
     edu_sub:'Lộ trình học tập',
     e1_school:'THPT Chuyên Lê Thánh Tông', e1_detail:'Chuyên Vật lý · Hội An, Đà Nẵng',
-    e2_school:'Đại học Bách Khoa Đà Nẵng', e2_detail:'Ngành: Xây dựng Đường sắt Tốc độ cao & Đường sắt Đô thị',
+    e2_school:'Đại học Bách Khoa - Đại học Đà Nẵng', e2_detail:'Ngành: Xây dựng Đường sắt Tốc độ cao & Đường sắt Đô thị',
     present:'Hiện tại',
     // Achievements
     ach_sub:'Giải thưởng & Thành tựu',
-    ach1_title:'Giải Nhì Học sinh Giỏi Văn / Ngữ văn cấp Thành phố',
+    ach1_title:'Giải Nhì Văn học - Học văn cấp Thành phố',
     ach1_badge:'Cấp Thành phố',
     ach2_year:'Sắp tới',
     ach2_title:'Giải thưởng Học thuật Đại học (Placeholder)',
@@ -1270,15 +1269,4 @@ document.addEventListener('click', e => {
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
 }
-document.querySelectorAll('.nav-links a').forEach(a =>
-  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
-);
-
-/* ═══ NAVBAR SCROLL SHADOW ═══ */
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').style.boxShadow =
-    window.scrollY > 20 ? '0 6px 28px rgba(0,0,0,0.5)' : 'none';
-});
-</script>
-</body>
-</html>
+document.querySelectorAl
